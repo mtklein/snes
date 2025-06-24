@@ -1,9 +1,10 @@
 #include <snes.h>
 
 int main(void) {
-    consoleDemoInit();
+    consoleInit();
     consoleDrawText(10, 10, "Hello World");
-    while(1) {
+    setScreenOn();
+    while (1) {
         WaitForVBlank();
     }
     return 0;

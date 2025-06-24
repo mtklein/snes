@@ -4,11 +4,15 @@ This project demonstrates a minimal Super Nintendo (SNES) program written in C. 
 
 ## Requirements
 
-- [pvsneslib](https://github.com/alekmaul/pvsneslib) toolchain installed at `$HOME/snesdev`. This provides the compiler, linker and standard libraries required for SNES development.
+- Submodule [pvsneslib](https://github.com/alekmaul/pvsneslib) checked out in `pvsneslib/`. It contains the compiler, linker and standard libraries required for SNES development.
 
 ## Building
 
-1. Ensure `SNESDEV` environment variable points to your pvsneslib installation. By default it uses `$HOME/snesdev`.
+1. Initialize the submodule once after cloning:
+   ```
+   git submodule update --init
+   ```
+   The Makefile automatically uses `pvsneslib` as `PVSNESLIB_HOME`.
 2. Run `make` to build `hello.sfc`.
 
 ```
